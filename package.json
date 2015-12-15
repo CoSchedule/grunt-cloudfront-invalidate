@@ -1,7 +1,7 @@
 {
   "name": "grunt-cloudfront-invalidate",
   "description": "A simple plugin to trigger a cloudfront invalidation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "homepage": "https://github.com/CoSchedule/grunt-cloudfront-invalidate",
   "author": {
     "name": "cosrnos",

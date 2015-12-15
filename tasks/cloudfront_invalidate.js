@@ -17,10 +17,11 @@ module.exports = function (grunt) {
         var done = this.async();
         var options = this.options({
             args: this.args,
+            reference: this.nameArgs
         });
 
         if (options.debug) {
-            grunt.log.ok(this.nameArgs + ' options:', options);
+            grunt.log.ok(options.reference + ' options:', options);
         }
 
         if (!validateOptions(options, grunt)) {
@@ -41,7 +42,7 @@ module.exports = function (grunt) {
         }
 
         if (options.debug) {
-            grunt.log.ok(this.nameArgs + ' invalidation:');
+            grunt.log.ok(options.reference + ' invalidation:');
             grunt.log.ok(invalidateParams);
             return;
         }
@@ -52,7 +53,7 @@ module.exports = function (grunt) {
                 return done(false);
             }
 
-            grunt.log.ok(this.nameArgs + " invalidation finished.");
+            grunt.log.ok(options.reference + " invalidation finished.");
             return done();
         });
     });
